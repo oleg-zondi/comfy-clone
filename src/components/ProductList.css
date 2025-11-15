@@ -9,25 +9,18 @@
   justify-content: center;
 }
 
-.list-wrapper > div {
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-.product-list-container {
-  margin-top: 30px;
-}
-
-.list-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.list-wrapper > div {
-  padding: 0 10px;
-  box-sizing: border-box;
-
+.list-wrapper .slick-list {
   height: auto !important;
+}
+
+.list-wrapper .slick-track {
+  height: auto !important;
+}
+
+.list-wrapper > div {
+  padding: 0 10px;
+  box-sizing: border-box;
+
   min-height: 400px;
+  height: 100%;
 }
