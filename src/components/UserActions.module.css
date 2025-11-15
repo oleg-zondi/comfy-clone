@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  gap: 15px;
+}
+
+.action-item {
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  align-items: center;
+  gap: 5px;
+}
+
+.action-item:hover {
+  color: #e44d26;
+}
