@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 import "./ProductList.css";
 import Slider from "react-slick";
 
-export default function ProductList({ title }) {
+export default function ProductList({ title, category }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function ProductList({ title }) {
       }
     };
     fetchProducts();
-  }, []);
+  }, [category]);
 
   const settings = {
     dots: true,
@@ -25,6 +25,23 @@ export default function ProductList({ title }) {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
